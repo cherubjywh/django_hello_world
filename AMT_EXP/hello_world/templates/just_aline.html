@@ -1,8 +1,51 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		fadfafa
-	</head>
-	<body>
-	<h3>adfafaf.</h3>
-	</body>
+<head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="https://static.jstree.com/latest/assets/dist/themes/default/style.min.css" />
+
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script type="text/javascript" src="https://static.jstree.com/latest/assets/dist/jstree.min.js"></script>
+   <script type="text/javascript" src="/static/timer.js"></script>
+   <script type="text/javascript" src="/static/data.js"></script>
+   <link rel="stylesheet" href="/static/style.css" />
+   
+   <title>Tree Assignment</title>
+</head>
+<body>
+   <form action="{{ amazon_host }}" method="POST">
+      <!-- <textarea type = "hidden" rows="4" cols="50" name="user-input"></textarea> -->
+      <input type="hidden" id="user-input" name="user-input"/>
+      <input type="hidden" id="assignmentId" value="{{ assignment_id }}" name="assignmentId"/>
+      <br/>
+      <input type="hidden" id="workerId" value="{{ worker_id }}" name="workerId"/>
+      <input type="hidden" id="hitId" value="{{ hit_id }}" name="hitId"/>
+      <!-- <input type="submit"> -->
+   </form>
+   <div id="wrap">
+      <h1 id ="header">How Long Does It Take You To Find The Picture?</h1>
+      <p id ="description">Looking at the picture on the left, try to find same picture inside the folder. Note that this game will be timed! Please click start button to see the list of folder.
+      </p>
+      <div id="timer">
+         <h2 id="timeNum"><time>00:00:00</time></h2>
+         <div id="align">
+            <button id="start">start</button>
+            <button id="restart">reset</button>
+         </div>
+      </div>
+      <div id="temporary">
+         <img src="" alt="img"/>
+      </div>   
+      
+      <div id="category"></div>
+      <div id="disabler"></div>
+      <div id= "imagewrap">
+         <div id= "default"></div>
+         <div id="images"> 
+             <!-- onclick="srcGetter()" -->
+	     <script type="text/javascript" src="/static/images.js"></script>
+         </div>
+      </div>
+   </div><!--end wrap-->
+</body>
 </html>
